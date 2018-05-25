@@ -3,11 +3,11 @@
  * @Date:   2018-05-25T22:09:32+02:00
  * @Email:  info@marcperez.cat
  * @Last modified by:   welvi
- * @Last modified time: 2018-05-25T22:22:50+02:00
+ * @Last modified time: 2018-05-25T22:28:09+02:00
  */
 
 
-import { select, all, takeLatest, put, call, fork } from 'redux-saga/effects';
+import { all, takeLatest, put, fork } from 'redux-saga/effects';
 import globalActions from './globalActions';
 
 const clients = [
