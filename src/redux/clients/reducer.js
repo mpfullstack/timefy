@@ -3,7 +3,7 @@
  * @Date:   2018-05-25T20:13:18+02:00
  * @Email:  info@marcperez.cat
  * @Last modified by:   welvi
- * @Last modified time: 2018-05-25T21:28:10+02:00
+ * @Last modified time: 2018-05-25T22:24:10+02:00
  */
 
 
@@ -15,26 +15,11 @@ const initState = new Map({
   items: []
 });
 
-const items = [
-  {
-    "id": 1,
-    "name": "Whads Accent SL"
-  },
-  {
-    "id": 2,
-    "name": "Cocuyo Labs"
-  },
-  {
-    "id": 3,
-    "name": "SERHS Tourism"
-  }
-];
-
 export default function clientsReducer(state = initState, action) {
   switch (action.type) {
-    case globalActions.REQUESTS_ITEMS:
+    case globalActions.REQUEST_ITEMS_SUCCESS:
       return state
-        .set('clients', items);
+        .set('items', action.items);
     default:
       return state;
 
