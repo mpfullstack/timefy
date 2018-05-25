@@ -3,12 +3,12 @@
  * @Date:   2018-05-25T17:30:35+02:00
  * @Email:  info@marcperez.cat
  * @Last modified by:   welvi
- * @Last modified time: 2018-05-25T20:43:34+02:00
+ * @Last modified time: 2018-05-25T22:05:25+02:00
  */
 
 
 
-import React, { Component } from 'react';
+import React from 'react';
 import { ConnectedRouter } from 'react-router-redux';
 import { connect } from 'react-redux';
 import { Switch, Route } from 'react-router-dom';

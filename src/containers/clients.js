@@ -3,7 +3,7 @@
  * @Date:   2018-05-25T17:35:20+02:00
  * @Email:  info@marcperez.cat
  * @Last modified by:   welvi
- * @Last modified time: 2018-05-25T22:02:45+02:00
+ * @Last modified time: 2018-05-25T22:05:41+02:00
  */
 
 import React, { Component } from 'react';
@@ -24,7 +24,7 @@ class Clients extends Component {
   }
 
   render() {
-    const { classes, items } = this.props;
+    const { items } = this.props;
     return (
       <BaseLayout>
         <AppNavigation />
