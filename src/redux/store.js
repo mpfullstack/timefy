@@ -3,7 +3,7 @@
  * @Date:   2017-12-19T14:37:27+01:00
  * @Email:  info@marcperez.cat
  * @Last modified by:   welvi
- * @Last modified time: 2018-05-25T20:23:47+02:00
+ * @Last modified time: 2018-05-25T22:14:38+02:00
  */
 
 
@@ -12,16 +12,16 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import createHistory from 'history/createBrowserHistory';
 import { routerReducer, routerMiddleware } from 'react-router-redux';
 import thunk from 'redux-thunk';
-// import createSagaMiddleware from 'redux-saga';
+import createSagaMiddleware from 'redux-saga';
 import reducers from './reducers';
-// import rootSaga from '../redux/sagas';
+import rootSaga from './sagas';
 
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 const history = createHistory();
-// const sagaMiddleware = createSagaMiddleware();
+const sagaMiddleware = createSagaMiddleware();
 const routeMiddleware = routerMiddleware(history);
-const middlewares = [thunk, /*sagaMiddleware,*/ routeMiddleware];
+const middlewares = [thunk, sagaMiddleware, routeMiddleware];
 
 const store = createStore(
   combineReducers({
@@ -30,5 +30,5 @@ const store = createStore(
   }),
   composeWithDevTools(applyMiddleware(...middlewares))
 );
-// sagaMiddleware.run(rootSaga);
+sagaMiddleware.run(rootSaga);
 export { store, history };
