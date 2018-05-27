@@ -5,6 +5,9 @@
   "dependencies": {
     "@material-ui/core": "1.0.0",
     "@material-ui/icons": "1.0.0",
+    "es6-promise": "4.2.4",
+    "fetch-everywhere": "1.0.5",
+    "lodash": "4.17.10",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-redux": "5.0.7",
