@@ -3,7 +3,7 @@
  * @Date:   2018-05-25T17:35:20+02:00
  * @Email:  info@marcperez.cat
  * @Last modified by:   welvi
- * @Last modified time: 2018-05-25T22:05:41+02:00
+ * @Last modified time: 2018-05-27T17:22:06+02:00
  */
 
 import React, { Component } from 'react';
@@ -24,14 +24,14 @@ class Clients extends Component {
   }
 
   render() {
-    const { items } = this.props;
+    const { clients } = this.props;
     return (
       <BaseLayout>
         <AppNavigation />
         <Content>
           <div>Clients</div>
           {
-            items.map(item => <p>{item.name}</p>)
+            clients.map(client => <p>{client.name}</p>)
           }
         </Content>
       </BaseLayout>
@@ -40,7 +40,7 @@ class Clients extends Component {
 }
 
 const mapStateToProps = state => ({
-  items: state.Clients.get('items')
+  clients: state.Clients.get('clients')
 });
 
 const { requestItems } = globalActions;
