@@ -26,6 +26,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "redux-devtools-extension": "2.13.2"
+    "redux-devtools-extension": "2.13.2",
+    "redux-saga-test-plan": "3.6.0"
   }
 }
